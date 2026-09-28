@@ -8,7 +8,6 @@ download scripts, and data behind the main figures and tables.
 [![Project page](https://img.shields.io/badge/PROJECT%20PAGE-j3ra1d.top-2F855A?style=for-the-badge)](https://j3ra1d.top/opd-test-time-scaling/)
 [![Checkpoints](https://img.shields.io/badge/CHECKPOINTS-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)](https://huggingface.co/collections/Geraldxm/opd-test-time-scaling-math-code-and-fact-checkpoints-6aba42275d3362d882cfc472)
 [![Code and data](https://img.shields.io/badge/CODE%20%26%20DATA-000000?style=for-the-badge&logo=github&logoColor=white)](#code-and-data)
-[![License](https://img.shields.io/badge/APACHE--2.0-A42C25?style=for-the-badge&logo=apache&logoColor=white)](LICENSE)
 
 [Main findings](#main-findings) · [Quick reproduction](#quick-reproduction) · [Citation](#citation)
 
@@ -51,18 +50,19 @@ different problem groups contribute to these two outcomes.
 
 For a problem $x$, let $p_{\mathrm{base}}(x)$ be its pre-OPD
 accuracy and $\Delta p(x)=p_{\mathrm{OPD}}(x)-p_{\mathrm{base}}(x)$.
-For $K$ independent samples from the same fixed model distribution,
+For $K$ independent samples from the same fixed model distribution, let
+$P_K(x)$ denote the problem-level pass@K:
 
 $$
-\operatorname{pass@}K(x)=1-\bigl(1-p(x)\bigr)^K.
+P_K(x)=1-\bigl(1-p(x)\bigr)^K.
 $$
 
-**Lemma 1.** For every finite positive integer $K$, $\Delta\operatorname{pass@}K(x)$
+**Lemma 1.** For every finite positive integer $K$, $\Delta P_K(x)$
 has the same sign as $\Delta p(x)$: a problem does not flip direction as
 the sampling budget changes. For small changes,
 
 $$
-\Delta\operatorname{pass@}K(x)=K\bigl(1-p_{\mathrm{base}}(x)\bigr)^{K-1}
+\Delta P_K(x)=K\bigl(1-p_{\mathrm{base}}(x)\bigr)^{K-1}
 \Delta p(x)+O\!\left(\Delta p(x)^2\right).
 $$
 
