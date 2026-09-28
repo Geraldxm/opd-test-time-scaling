@@ -47,7 +47,49 @@ different problem groups contribute to these two outcomes.
 
 </details>
 
-### 3. TAS@K helps choose a teacher before training
+### 3. Theory explains budget-dependent reversals
+
+For a problem $x$, let $p_{\mathrm{base}}(x)$ be its pre-OPD
+accuracy and $\Delta p(x)=p_{\mathrm{OPD}}(x)-p_{\mathrm{base}}(x)$.
+For $K$ independent samples from the same fixed model distribution,
+
+$$
+\operatorname{pass@}K(x)=1-\bigl(1-p(x)\bigr)^K.
+$$
+
+**Lemma 1.** For every finite positive integer $K$, $\Delta\operatorname{pass@}K(x)$
+has the same sign as $\Delta p(x)$: a problem does not flip direction as
+the sampling budget changes. For small changes,
+
+$$
+\Delta\operatorname{pass@}K(x)=K\bigl(1-p_{\mathrm{base}}(x)\bigr)^{K-1}
+\Delta p(x)+O\!\left(\Delta p(x)^2\right).
+$$
+
+The weight on each problem changes with $K$, so aggregation can reverse
+even though each problem's direction does not.
+
+**Proposition 1.** Let $G=\mathbb{E}[\max\{\Delta p,0\}]$ and
+$L=\mathbb{E}[\max\{-\Delta p,0\}]>0$. If improved problems have base
+accuracy at least $p_+$, degraded problems have base accuracy at most
+$p_-$, and $0<p_-<p_+<1$, then, for fixed $K>1$,
+
+$$
+1 < \frac{G}{L} <
+\left(\frac{1-p_-}{1-p_+}\right)^{K-1}
+$$
+
+is sufficient for a dataset-level pass@1 gain and pass@K loss. It is a
+sufficient condition, not a necessary one.
+
+**Proposition 2.** In an idealized small-step, full-vocabulary reverse-KL
+construction, a teacher can be more accurate on every problem while finite
+OPD training still yields a local pass@1 gain and a large-$K$ loss,
+including at $K=1024$. Intermediate OPD checkpoints can also have lower
+accuracy than the pre-OPD base on some problems. This establishes a
+finite-training possibility, not an inevitable outcome or a convergence claim.
+
+### 4. TAS@K helps choose a teacher before training
 
 The Teacher Advantage Score at K (TAS@K) compares two candidate teachers using
 pre-OPD base-model responses and their likelihoods under both teachers. In the
