@@ -1,0 +1,56 @@
+{
+  "package": "FactQA",
+  "data_version": "fact_eval_v2",
+  "scorer_id": "fact-v3",
+  "prompt_version": "fact-step-answer-v3-chat",
+  "prompt_sha256": "2934ef92f22e04e9cd6aee4bae56bd67d9d802df5f4c2521ff27cb02f14e10e8",
+  "scorer_sha256": "5f587b6bcfcd4b1912b193a97c7d36466526bbc84a6899d3c249c4f7cefb4b99",
+  "upstream_scorer": {
+    "source": "frozen fact-v3 reference scorer",
+    "sha256": "0808654e7a301d5eb4a3ba76fc0b2f2e90385dcfbfba04d9f6f06e649919b892"
+  },
+  "selection_provenance": "data/selection_provenance.json",
+  "selection_provenance_sha256": "5cf95ec1b334002745f0dc60b69f019df4bd6de00709888c84ca10f0f037a3ae",
+  "datasets": {
+    "2wikimultihopqa": {
+      "canonical_file": "data/canonical/2wikimultihopqa.jsonl",
+      "canonical_file_sha256": "9dad14983362f22291e4067f2eef994e407f74b4a61a5888ccd30360dd5fe5a8",
+      "math_eval_dataset_sha256": "d45c58aa2c670090ee22cfd4a4d6e87f353788a315661b086480875608f756ad",
+      "rows": 200,
+      "upstream_file": "2wikimultihopqa/dev.jsonl",
+      "upstream_file_sha256": "b4d74d73d1cb3c0632c665a85e1e5060e3411968b807721618cfd2464fc905e3",
+      "selected_output_sha256": "9dad14983362f22291e4067f2eef994e407f74b4a61a5888ccd30360dd5fe5a8",
+      "source_rows": 12576
+    },
+    "hotpotqa": {
+      "canonical_file": "data/canonical/hotpotqa.jsonl",
+      "canonical_file_sha256": "d87e3dc734dd30c0d3bdde84c333b1d9762d79484cbd4fbb4b9ec667ab4949a4",
+      "math_eval_dataset_sha256": "fff574f39ca1e15a6d298fcdcc488cdb3b166f231e620d04ee2231e6b266d935",
+      "rows": 200,
+      "upstream_file": "hotpotqa/dev.jsonl",
+      "upstream_file_sha256": "434ec155867019396312f3d466ce3406c71fe8a2917f49f63bb646ec5ad2ff52",
+      "selected_output_sha256": "d87e3dc734dd30c0d3bdde84c333b1d9762d79484cbd4fbb4b9ec667ab4949a4",
+      "source_rows": 7405
+    },
+    "popqa": {
+      "canonical_file": "data/canonical/popqa.jsonl",
+      "canonical_file_sha256": "7fa48646baf1a6fce3e9eb174797ff8132761a786a1377be871ee9c1c3f57535",
+      "math_eval_dataset_sha256": "1fb393f75ff4280ab3c726830a523a7ee6924fbf921562c782fc67405a687581",
+      "rows": 200,
+      "upstream_file": "popqa/test.jsonl",
+      "upstream_file_sha256": "f976372fce3d7fe01b070357040391f10bd2710eeaa7c40d21c6574ffcad6cb8",
+      "selected_output_sha256": "7fa48646baf1a6fce3e9eb174797ff8132761a786a1377be871ee9c1c3f57535",
+      "source_rows": 14267
+    },
+    "triviaqa": {
+      "canonical_file": "data/canonical/triviaqa.jsonl",
+      "canonical_file_sha256": "afdf6b78003140549cf2a2460c642a09ab9e77785e913c46faedae87f5b3f765",
+      "math_eval_dataset_sha256": "41069065c688bcb41224aa1c0532a58d53b099d9c21dc8e300efb4e022a7f3c6",
+      "rows": 200,
+      "upstream_file": "triviaqa/test.jsonl",
+      "upstream_file_sha256": "8f0891dece17a6a6472c87bf0e8c555c80673853d8dc7780be4d47158ec85290",
+      "selected_output_sha256": "afdf6b78003140549cf2a2460c642a09ab9e77785e913c46faedae87f5b3f765",
+      "source_rows": 11313
+    }
+  }
+}

@@ -1,0 +1,1 @@
+Solve the following programming problem. Return only the complete Python solution, without Markdown fences. {{problem}}

@@ -1,0 +1,13 @@
+{
+  "dataset": "mbpp_plus",
+  "source_path": "data/source/MbppPlus.jsonl",
+  "source_repo": "https://github.com/evalplus/mbppplus_release",
+  "source_release": "v0.2.0",
+  "source_sha256": "b54e762755248ca411b523c917fa9f93c07b5ff2966bf60b3917b853926a3dad",
+  "source_row_count": 378,
+  "canonical_path": "data/canonical/mbpp_plus.jsonl",
+  "canonical_sha256": "5b07e58fcab0204278179d2062a6bcadbcb9d520298f0114f13e0c5cf3fba83e",
+  "canonical_row_count": 378,
+  "inference_serialization": "Qwen3 chat, non-thinking",
+  "gopd_source_snapshot_commit": "37371a4c31ad7947746200d234161769191f4748"
+}

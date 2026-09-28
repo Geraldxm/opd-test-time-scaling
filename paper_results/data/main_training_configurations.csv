@@ -1,0 +1,4 @@
+domain,training_set,global_prompt_batch,learning_rate,schedule,max_prompt_tokens,max_response_tokens
+Math,DAPO-Math-17K,64,1e-6,constant,1024,7168
+Code,CodeR1-12K,128,5e-7,cosine,2048,4096
+Fact,NQ + HotpotQA,64,1e-6,constant,1024,3072

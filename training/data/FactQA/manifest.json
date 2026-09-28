@@ -1,0 +1,38 @@
+{
+  "dataset": "closed_book_fact_train_v1",
+  "scope": "training only; includes NQ and HotpotQA; no NQ evaluation set is included",
+  "upstream": {
+    "repo": "PeterJinGo/nq_hotpotqa_train",
+    "url": "https://huggingface.co/datasets/PeterJinGo/nq_hotpotqa_train",
+    "revision": "b7d80abfee334a7a91cb377544f09180d58b34f6",
+    "path": "train.parquet",
+    "sha256": "c3cc21e862a8469105de666101578cbff23cdc77e91a803cef102622c89cc4f6",
+    "rows": 169615,
+    "source_sha256_after_lossless_jsonl_snapshot": "e2680dcf918a73312ce89e0173d931934ceac0d1db349d8a9ef66413e812d044",
+    "license": "See the upstream dataset card."
+  },
+  "prompt": {
+    "file": "prompt.txt",
+    "sha256": "2934ef92f22e04e9cd6aee4bae56bd67d9d802df5f4c2521ff27cb02f14e10e8",
+    "template": "{{problem}}\nPlease reason step by step, then give a concise final answer in <answer></answer> tags. Put the tagged answer on a new final line.\n"
+  },
+  "derived": {
+    "train.parquet": {
+      "sha256": "7b7fb68445060dcdd2fde7ca58c00c611d49a2ca1dc0a5838ff71bc01491d04c",
+      "rows": 169615,
+      "data_source_counts": {
+        "hotpotqa": 90447,
+        "nq": 79168
+      },
+      "schema": ["id", "data_source", "prompt", "ability", "reward_model", "extra_info", "metadata"],
+      "gold_location": "reward_model.ground_truth.target",
+      "question_prompt_role": "user"
+    }
+  },
+  "build": {
+    "python": "3.10+",
+    "pyarrow": "23.0.1",
+    "batch_rows": 4096,
+    "parquet_compression": "zstd"
+  }
+}

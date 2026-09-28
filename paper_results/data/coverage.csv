@@ -1,0 +1,24 @@
+artifact_type,paper_label,paper_asset,published_data_or_note
+figure,fig:opd-sampling-budget-teaser,figures/teaser_compact.png,Conceptual schematic; no benchmark-result CSV.
+figure,fig:code-settings,figures/pass_at_k_code_settings_model_rows_compact_v6_flat.pdf,data/capacity_curves.csv; Code pass@K.
+figure,fig:fact-settings,figures/pass_at_k_fact_settings_two_teachers_compact_flat.pdf,data/capacity_curves.csv; Fact pass@K.
+figure,fig:math-settings,figures/pass_at_k_math_settings_model_rows.pdf,data/capacity_curves.csv; Math pass@K.
+figure,fig:qwen3-advanced-opd,figures/pass_at_k_qwen3_advanced_opd_methods.pdf,data/opd_method_variants.csv.
+figure,fig:math-fact-passk-decomposition,figures/math_fact_p_bin_split_by_accuracy_direction.pdf,data/figure_decomposition.csv; grouped counts and contribution curves only.
+figure,fig:tas-teacher-selection,figures/tas_at_k_opd_compact_with_fact_no_nq.pdf,data/tas_at_k_summary.csv; 177 rows / 148 direction hits.
+figure,fig:opd-training-dynamics,figures/pass_at_k_skywork_checkpoint_progression.pdf,data/training_dynamics.csv; Math rows.
+figure,fig:opd-training-dynamics-code,figures/pass_at_k_rlcode4b_checkpoint_progression_v6_flat.pdf,data/training_dynamics.csv; Code rows.
+figure,fig:skywork-retained-alignment,figures/skywork_primary4_random_alignment_ppl.pdf,data/trajectory_perplexity.csv; per-problem PPL means.
+figure,fig:qwen-trajectory-cases,Text composed in main manuscript,"data/case_study_excerpt.csv; exact excerpt only, no raw rollout."
+figure,fig:avgk-math,figures/avg_at_k_math_settings_model_rows_compact_flat.pdf,data/capacity_curves.csv; Math avg@K.
+figure,fig:avgk-code,figures/avg_at_k_code_settings_model_rows_compact_flat.pdf,data/capacity_curves.csv; Code avg@K.
+figure,fig:avgk-fact,figures/avg_at_k_fact_settings_two_teachers_compact_flat.pdf,data/capacity_curves.csv; Fact avg@K.
+table,Tble:OPD_Setting,LaTeX table,data/opd_settings.csv.
+table,tab:pass1-overview,LaTeX table,data/pass1_overview.csv; equal-weight benchmark means derived from the frozen curves.
+table,tab:main-training-configurations,LaTeX table,data/main_training_configurations.csv; NQ appears only as training-set name.
+table,tab:training-hyperparameters,LaTeX table,data/opd_variant_hyperparameters.csv.
+table,tab:primary-pass-numerical,LaTeX table,data/capacity_curves.csv; domain=Math.
+table,tab:code-pass-numerical,LaTeX table,data/capacity_curves.csv; domain=Code.
+table,tab:fact-pass-numerical,LaTeX table,data/capacity_curves.csv; domain=Fact.
+table,tab:training-dynamics-endpoints,LaTeX table,data/training_dynamics.csv; domain=Math.
+table,tab:training-dynamics-code-numerical,LaTeX table,data/training_dynamics.csv; domain=Code.

@@ -1,0 +1,32 @@
+dataset:
+  name: popqa
+  path: evaluation/benchmarks/FactQA/data/canonical/popqa.jsonl
+
+prompt: evaluation/benchmarks/FactQA/prompts/chat
+
+model:
+  name: Qwen3-1.7B
+  backend: vllm
+  path: Qwen/Qwen3-1.7B
+  input_mode: chat
+  thinking: false
+  runtime:
+    tensor_parallel_size: 1
+    dtype: bfloat16
+    max_context_tokens: 8192
+    gpu_memory_utilization: 0.85
+    enforce_eager: true
+    request_batch_size: 128
+
+decode:
+  temperature: 0.7
+  top_p: 0.95
+  seed: 0
+  max_output_tokens: 4096
+  samples_per_problem: 1024
+
+output:
+  root: outputs/shards
+  shard_size: 5000
+  compression: none
+  fsync_every: 128

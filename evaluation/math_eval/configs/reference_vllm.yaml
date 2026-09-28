@@ -1,0 +1,47 @@
+# vLLM backend 完整配置参考；当前值可直接读取仓库 example 数据。
+dataset:
+  name: example_math                 # 写入 raw 与 problem_uid 的数据集名。
+  path: data/example_math.jsonl           # canonical JSONL；每行至少含 id/problem/answer。
+  limit: 1                           # 最多读取题数；删除此行即读取完整文件。
+
+prompt: prompts/math-chat            # chat 用目录；completion 改为单个文本文件。
+
+model:
+  name: Qwen2.5-1.5B-Instruct        # run manifest 与 raw 中记录的显示名称。
+  backend: vllm                      # 本参考固定为 vllm。
+  path: Qwen/Qwen2.5-1.5B-Instruct   # 本地路径或 Hugging Face model ID。
+  # tokenizer_path: /path/to/tokenizer  # 省略时与 path 相同。
+  input_mode: chat                   # chat | completion。
+  # thinking: false                  # 仅支持 Qwen enable_thinking 的模板可设置，且必须显式设置。
+  # runtime:
+  #   tensor_parallel_size: 1        # tensor parallel GPU 数；默认 1。
+  #   dtype: bfloat16                # vLLM dtype；默认 auto。
+  #   max_context_tokens: 8192       # 映射为 vLLM max_model_len。
+  #   gpu_memory_utilization: 0.85   # 每张 GPU 的目标显存占比；默认 0.9。
+  #   max_num_seqs: 64               # vLLM engine 的并发序列上限。
+  #   request_batch_size: 64         # 本工具每次提交给 vLLM 的请求数；默认 1。
+  #   enforce_eager: false           # 传给 vLLM engine。
+  #   disable_custom_all_reduce: false  # 传给 vLLM engine。
+  #   language_model_only: true      # 仅 Qwen3.5/3.6 hybrid 模型按需设置。
+  #   gdn_prefill_backend: triton    # 仅 Qwen3.5/3.6 hybrid 模型按需设置。
+
+decode:
+  temperature: 0.0                  # >= 0；n>1 时通常应使用非零值。
+  top_p: 1.0                        # (0, 1]。
+  # top_k: 20                       # >= 0；省略即不传。
+  # min_p: 0.0                      # [0, 1]；省略即不传。
+  seed: 0                           # 每个 sample 自动加 sample_idx。
+  max_output_tokens: 1024           # 生成上限；>= 1。
+  # min_output_tokens: 0            # 最少生成 token 数；省略即不传。
+  # stop: ["<END>"]                 # 单个字符串或字符串列表；省略即不传。
+  # stop_token_ids: [151645]         # vLLM token ID 列表；special token 应使用此字段。
+  # repetition_penalty: 1.0         # 省略即不传。
+  # presence_penalty: 0.0           # 省略即不传。
+  # frequency_penalty: 0.0          # 省略即不传。
+  samples_per_problem: 1            # 每题 sample 数；>= 1。
+
+output:
+  root: outputs/runs                 # run 根目录，实际目录为 root/run_id。
+  shard_size: 100                    # 每个 sealed raw shard 的 sample 数。
+  compression: none                 # none | gzip。
+  fsync_every: 1                     # active raw 每写多少行 fsync 一次。

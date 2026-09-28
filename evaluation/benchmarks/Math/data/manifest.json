@@ -1,0 +1,26 @@
+{
+  "math_vault_commit": "04820743fbc4c0cf1e2082bce29a764a1790265c",
+  "source_repository": "https://github.com/Geraldxm/math-vault",
+  "files": {
+    "amc2023.jsonl": {
+      "source": "math-vault/canonical/amc_2023/test.jsonl",
+      "sha256": "bba75a3421023fe514dac72dfbacb9a3fd5ac04905ee2a02e7b354fe223df40e",
+      "rows": 40
+    },
+    "aime2024.jsonl": {
+      "source": "math-vault/canonical/aime_2024/train.jsonl",
+      "sha256": "decfafc9fc3e161ac18f77bed83bdd27520f378e3eeccb6a2db0de761804b63b",
+      "rows": 30
+    },
+    "aime2025.jsonl": {
+      "source": "math-vault/canonical/aime_2025/train.jsonl",
+      "sha256": "ae72e19fcf670d7fb89862369a28160103a976b1cb88cb8611e7a5b84e03dc83",
+      "rows": 30
+    },
+    "aime2026.jsonl": {
+      "source": "math-vault/canonical/aime_2026/train.jsonl",
+      "sha256": "c04d04e64dd16bc6f714b7451d67404a3185f817ec4b158637ec4128d8b55451",
+      "rows": 30
+    }
+  }
+}

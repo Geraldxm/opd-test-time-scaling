@@ -1,0 +1,1 @@
+{"question_title":"Add two integers","question_content":"Read two integers and print their sum.","platform":"codeforces","question_id":"lcb-smoke-add","contest_id":"smoke","contest_date":"2025-01-01T00:00:00","starter_code":"","difficulty":"easy","public_test_cases":"[]","private_test_cases":"[{\"input\":\"2 3\\n\",\"output\":\"5\\n\",\"testtype\":\"stdin\"}]","metadata":"{}"}

@@ -1,0 +1,10 @@
+{"id":"example/arithmetic-1","problem":"Compute 2+2.","answer":"4","solution":"2+2=4."}
+{"id":"example/fraction-1","problem":"Write five ninths as a reduced fraction.","answer":"\\frac 59","solution":"Five and nine are coprime, so the reduced fraction is 5/9."}
+{"id":"example/algebra-1","problem":"Expand (x-1)(x+1).","answer":"x^2-1","solution":"The middle terms cancel, leaving x^2-1."}
+{"id":"example/polar-1","problem":"Convert the Cartesian point (0,3) to polar coordinates (r, theta), with r nonnegative and theta in [0,2pi).","answer":"\\left(3,\\frac{\\pi}{2}\\right)","solution":"The radius is 3 and the point lies on the positive y-axis, so theta=pi/2."}
+{"id":"example/complex-1","problem":"Compute (8-2i)-(2+3i).","answer":"6-5i","solution":"Subtract real and imaginary parts separately."}
+{"id":"example/interval-1","problem":"Solve (x-9)^2>0 subject to 0<x<36. Give the solution in interval notation.","answer":"(0,9) \\cup (9,36)","solution":"Every point in (0,36) works except x=9."}
+{"id":"example/roots-1","problem":"Find all real roots of x^2+x-2=0.","answer":"-2,1","solution":"Factor as (x+2)(x-1)."}
+{"id":"example/thousands-1","problem":"Compute 9!/36.","answer":"10,\\!080","solution":"9!=362880, and 362880/36=10080."}
+{"id":"example/vector-1","problem":"List the coefficient vector of x^3-16x^2-4x+43 in descending powers of x.","answer":"(1,-16,-4,43)","solution":"Read the four coefficients in descending degree order."}
+{"id":"example/set-1","problem":"Solve |2x-5|<=9 and express the result as a membership statement.","answer":"x \\in [-2,7]","solution":"The inequality is -9<=2x-5<=9, hence -2<=x<=7."}

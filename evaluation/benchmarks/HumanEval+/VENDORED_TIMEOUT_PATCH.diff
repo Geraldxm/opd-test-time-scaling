@@ -1,0 +1,14 @@
+diff --git a/code_eval/coding/evalplus/evalplus/eval/__init__.py b/code_eval/coding/evalplus/evalplus/eval/__init__.py
+index ded48b8..127e3df 100644
+--- a/code_eval/coding/evalplus/evalplus/eval/__init__.py
++++ b/code_eval/coding/evalplus/evalplus/eval/__init__.py
+@@ -144,7 +144,8 @@ def unsafe_execute(
+         exec_globals = {}
+         try:
+             with swallow_io():
+-                exec(code, exec_globals)
++                with time_limit(max(time_limits)):
++                    exec(code, exec_globals)
+                 fn = exec_globals[entry_point]
+ 
+             for i, inp in enumerate(inputs):

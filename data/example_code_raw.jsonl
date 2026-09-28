@@ -1,0 +1,1 @@
+{"problem_id":"toy/code-1","sample_idx":0,"input_mode":"chat","problem":"def add(a, b):\n    \"\"\"Return a + b.\"\"\"","final_text":"```python\ndef add(a, b):\n    return a + b\n```","raw_text":"```python\ndef add(a, b):\n    return a + b\n```"}

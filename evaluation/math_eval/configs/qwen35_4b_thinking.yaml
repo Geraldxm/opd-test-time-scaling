@@ -1,0 +1,33 @@
+dataset:
+  name: example_math
+  path: data/example_math.jsonl
+  limit: 10
+
+prompt: prompts/math-chat
+
+model:
+  name: Qwen3.5-4B
+  backend: vllm
+  path: Qwen/Qwen3.5-4B
+  input_mode: chat
+  thinking: true
+  runtime:
+    tensor_parallel_size: 1
+    dtype: bfloat16
+    max_context_tokens: 4096
+    gpu_memory_utilization: 0.8
+    language_model_only: true
+    gdn_prefill_backend: triton
+
+decode:
+  temperature: 0.0
+  top_p: 1.0
+  seed: 42
+  max_output_tokens: 512
+  samples_per_problem: 1
+
+output:
+  root: outputs/runs
+  shard_size: 100
+  compression: none
+  fsync_every: 1

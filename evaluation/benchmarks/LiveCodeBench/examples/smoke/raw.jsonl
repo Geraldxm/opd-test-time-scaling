@@ -1,0 +1,1 @@
+{"input_mode":"chat","problem_id":"lcb-smoke-add","sample_idx":0,"final_text":"```python\na, b = map(int, input().split())\nprint(a + b)\n```"}

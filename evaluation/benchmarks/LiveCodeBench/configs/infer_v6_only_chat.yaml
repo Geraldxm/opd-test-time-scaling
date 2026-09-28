@@ -1,0 +1,22 @@
+dataset:
+  name: livecodebench_v6_only
+  path: ../benchmarks/LiveCodeBench/data/canonical/livecodebench_v6_only_chat.jsonl
+prompt: ../benchmarks/LiveCodeBench/prompts/code-chat
+model:
+  name: Qwen3-1.7B
+  backend: vllm
+  path: Qwen/Qwen3-1.7B
+  input_mode: chat
+  thinking: false
+decode:
+  temperature: 1.0
+  top_p: 0.8
+  seed: 0
+  max_output_tokens: 8192
+  repetition_penalty: 1.0
+  samples_per_problem: 128
+output:
+  root: outputs/runs
+  shard_size: 256
+  compression: none
+  fsync_every: 64

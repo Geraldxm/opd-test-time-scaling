@@ -1,0 +1,50 @@
+# OpenAI-compatible backend 完整配置参考；当前值可直接读取仓库 example 数据。
+dataset:
+  name: example_math                 # 写入 raw 与 problem_uid 的数据集名。
+  path: data/example_math.jsonl           # canonical JSONL；每行至少含 id/problem/answer。
+  limit: 1                           # 最多读取题数；删除此行即读取完整文件。
+
+prompt: prompts/math-chat            # chat prompt 目录；正文不写入 YAML。
+
+model:
+  name: example-api-model            # run manifest 与 raw 中记录的显示名称。
+  backend: openai                    # 本参考固定为 openai。
+  input_mode: chat                   # OpenAI-compatible v1 目前只支持 chat。
+  endpoint: https://api.example.com/v1/chat/completions  # 必须是完整 Chat Completions URL。
+  api_model: example-api-model       # 请求 payload 中的 model。
+  api_key_env: OPENAI_API_KEY        # 只写环境变量名；密钥不得写入配置。
+  # 仅当 provider 明确支持 hard switch 时，才同时启用以下三项：
+  # thinking: false                  # true | false。
+  # reasoning_parameter: chat_template_kwargs.enable_thinking  # payload 中的布尔参数路径。
+  # capabilities:                    # 示例；不要为未验证字段虚报支持。
+  #   - chat_template_kwargs.enable_thinking
+  #   - top_k
+  #   - min_p
+  #   - min_output_tokens
+  #   - stop_token_ids
+  #   - repetition_penalty
+
+  # runtime:
+  #   timeout_seconds: 180           # 单次 HTTP 请求超时秒数；默认 180。
+  #   max_retries: 3                 # 429、5xx 与网络错误的重试次数；默认 3。
+
+decode:
+  temperature: 0.0                  # >= 0；n>1 时通常应使用非零值。
+  top_p: 1.0                        # (0, 1]。
+  # top_k: 20                       # 非标准 API 字段；需在 capabilities 声明。
+  # min_p: 0.0                      # 非标准 API 字段；需在 capabilities 声明。
+  seed: 0                           # 每个 sample 自动加 sample_idx。
+  max_output_tokens: 16384          # 请求中的 max_tokens；>= 1。
+  # min_output_tokens: 0            # 非标准 API 字段；需在 capabilities 声明。
+  # stop: ["<END>"]                 # 单个字符串或字符串列表。
+  # stop_token_ids: [151645]         # 非标准 API 字段；需在 capabilities 声明。
+  # repetition_penalty: 1.0         # 非标准 API 字段；需在 capabilities 声明。
+  # presence_penalty: 0.0           # OpenAI-compatible 标准字段。
+  # frequency_penalty: 0.0          # OpenAI-compatible 标准字段。
+  samples_per_problem: 1            # 每题 sample 数；>= 1。
+
+output:
+  root: outputs/runs                 # run 根目录，实际目录为 root/run_id。
+  shard_size: 100                    # 每个 sealed raw shard 的 sample 数。
+  compression: none                 # none | gzip。
+  fsync_every: 1                     # active raw 每写多少行 fsync 一次。

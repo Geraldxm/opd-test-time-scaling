@@ -1,0 +1,30 @@
+dataset:
+  name: example_math
+  path: data/example_math.jsonl
+  limit: 1
+
+prompt: prompts/math-chat
+
+model:
+  name: deepseek-v4-pro
+  backend: openai
+  input_mode: chat
+  endpoint: https://api.deepseek.com/v1/chat/completions
+  api_model: deepseek-v4-pro
+  api_key_env: DEEPSEEK_API_KEY
+  runtime:
+    timeout_seconds: 180
+    max_retries: 3
+
+decode:
+  temperature: 0.0
+  top_p: 1.0
+  seed: 0
+  max_output_tokens: 16384
+  samples_per_problem: 1
+
+output:
+  root: outputs/runs
+  shard_size: 100
+  compression: none
+  fsync_every: 1

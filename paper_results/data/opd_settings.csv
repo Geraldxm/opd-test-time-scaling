@@ -1,0 +1,9 @@
+domain,student,teacher,max_k,benchmarks
+Math,Qwen3-1.7B-Base,Qwen3-4B-Base-GRPO,1024,AMC2023;AIME2024;AIME2025;AIME2026
+Math,DS-Distill-Qwen-1.5B,Skywork-OR1-Math-7B,1024,AMC2023;AIME2024;AIME2025;AIME2026
+Math,DS-Distill-Qwen-1.5B,JustRL-DS-1.5B,1024,AMC2023;AIME2024;AIME2025;AIME2026
+Math,Qwen3-1.7B,Qwen3-4B-RL-Math,1024,AMC2023;AIME2024;AIME2025;AIME2026
+Code,Qwen3-1.7B,Qwen3-8B,512 (HumanEval+/MBPP+); 128 (LiveCodeBench v5/v6),HumanEval+;MBPP+;LiveCodeBench v5;LiveCodeBench v6
+Code,Qwen3-1.7B,Qwen3-4B-RL-Code,512 (HumanEval+/MBPP+); 128 (LiveCodeBench v5/v6),HumanEval+;MBPP+;LiveCodeBench v5;LiveCodeBench v6
+Fact,Qwen3-1.7B,Qwen3-8B-RL-RAR,1024,HotpotQA;TriviaQA;PopQA;2WikiMultiHopQA
+Fact,Qwen3-1.7B,SESA-8B-search,1024,HotpotQA;TriviaQA;PopQA;2WikiMultiHopQA

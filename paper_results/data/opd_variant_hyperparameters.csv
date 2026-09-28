@@ -1,0 +1,6 @@
+setting,global_batch,ppo_minibatch,max_prompt_tokens,max_response_tokens,learning_rate,schedule,rollout_top_k
+OPD,64,64,1024,7168,1e-6,cosine,disabled
+Direct-OPD,128,32,1024,4096,3e-6,cosine,disabled
+EOPD,128,32,1024,4096,3e-6,cosine,disabled
+FKL,128,32,1024,4096,3e-6,cosine,disabled
+ExOPD,1024,1024,2048,16384,1e-5,constant,disabled

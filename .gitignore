@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+*.log
+*.inprogress
+**/outputs/
+**/lcb_results/
+training/output/
+output/
+evaluation/benchmarks/LiveCodeBench/data/source/
+training/data/CodeR1-12K/source/
+training/data/FactQA/source/

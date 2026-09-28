@@ -1,0 +1,30 @@
+# Local collaboration and backup stay on this machine only.
+/.tasks/
+/archive/
+
+# Only the small canonical example is public.
+/data/*
+!/data/README.md
+!/data/example_math.jsonl
+/external_repos/
+
+# Generated experiment artifacts.
+/logs/
+/outputs/
+
+# Tool internals.
+.sii/
+/.claude/
+/.agents/
+/.codex/
+
+# Local credentials (never commit).
+.env
+.github_token
+
+# Python/runtime noise.
+/.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/

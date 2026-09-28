@@ -1,0 +1,32 @@
+dataset:
+  name: mbpp_plus
+  path: evaluation/benchmarks/MBPP+/data/canonical/mbpp_plus.jsonl
+
+prompt: evaluation/benchmarks/MBPP+/prompts/code-chat
+
+model:
+  name: Qwen3-1.7B
+  backend: vllm
+  path: Qwen/Qwen3-1.7B
+  input_mode: chat
+  thinking: false
+  runtime:
+    tensor_parallel_size: 1
+    dtype: bfloat16
+    max_context_tokens: 16384
+    gpu_memory_utilization: 0.95
+    request_batch_size: 64
+
+decode:
+  temperature: 0.7
+  top_p: 0.95
+  seed: 0
+  max_output_tokens: 8192
+  repetition_penalty: 1.0
+  samples_per_problem: 512
+
+output:
+  root: outputs/shards/code_completion
+  shard_size: 5000
+  compression: none
+  fsync_every: 128

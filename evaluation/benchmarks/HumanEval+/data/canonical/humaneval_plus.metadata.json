@@ -1,0 +1,13 @@
+{
+  "dataset": "humaneval_plus",
+  "source_path": "data/source/HumanEvalPlus.jsonl",
+  "source_repo": "https://github.com/evalplus/humanevalplus_release",
+  "source_release": "v0.1.10",
+  "source_sha256": "42526ec0e7d5f3ee0b06d6ced98f8c8bae3d76519151bfb3d36f79010645bd7f",
+  "source_row_count": 164,
+  "canonical_path": "data/canonical/humaneval_plus.jsonl",
+  "canonical_sha256": "7fee5dcd0f1f438df47d4eab083c5b0d4ba4c68881e795f7455a65eb2a80b71b",
+  "canonical_row_count": 164,
+  "inference_serialization": "Qwen3 chat, non-thinking",
+  "gopd_source_snapshot_commit": "37371a4c31ad7947746200d234161769191f4748"
+}

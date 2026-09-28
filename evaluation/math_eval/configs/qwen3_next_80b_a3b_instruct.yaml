@@ -1,0 +1,30 @@
+dataset:
+  name: example_math
+  path: data/example_math.jsonl
+  limit: 10
+
+prompt: prompts/math-chat
+
+model:
+  name: Qwen3-Next-80B-A3B-Instruct
+  backend: vllm
+  path: Qwen/Qwen3-Next-80B-A3B-Instruct
+  input_mode: chat
+  runtime:
+    tensor_parallel_size: 2
+    dtype: bfloat16
+    max_context_tokens: 4096
+    gpu_memory_utilization: 0.85
+
+decode:
+  temperature: 0.0
+  top_p: 1.0
+  seed: 0
+  max_output_tokens: 1024
+  samples_per_problem: 1
+
+output:
+  root: outputs/runs
+  shard_size: 10
+  compression: none
+  fsync_every: 1

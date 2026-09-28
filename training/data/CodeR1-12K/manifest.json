@@ -1,0 +1,24 @@
+{
+  "dataset": "CodeR1-12K",
+  "upstream": {
+    "repo": "ganler/code-r1-12k",
+    "url": "https://huggingface.co/datasets/ganler/code-r1-12k",
+    "path": "data/train-00000-of-00001.parquet",
+    "revision": "main (content pinned by SHA-256)",
+    "sha256": "ba9df84a1a629849b3684a80ec0331aa011ec19f3033bc776888a4eabd08dc0d",
+    "rows": 12458,
+    "license": "Not declared upstream; do not assume a license from component datasets."
+  },
+  "derived": {
+    "train.jsonl": {
+      "sha256": "ea30dd57c2ee8ab8940bc43d7b5a143bfc8fcd78cce22a1c73daeb6aee9e7ff5",
+      "rows": 12458,
+      "schema": ["id", "problem", "entry_point", "tests", "reference", "src", "index"]
+    },
+    "eopd_train.json": {
+      "sha256": "4460d2ad678c06ebdf8547f9b484f49ae4644a06ac8d544f11a6d1058256070e",
+      "rows": 12458,
+      "encoding": "one JSON object per line"
+    }
+  }
+}

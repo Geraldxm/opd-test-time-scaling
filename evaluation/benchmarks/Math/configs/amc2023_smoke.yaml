@@ -1,0 +1,27 @@
+dataset:
+  name: amc2023
+  path: ../benchmarks/Math/data/amc2023.jsonl
+  limit: 1
+prompt: ../benchmarks/Math/prompts/chat
+model:
+  name: Qwen3-1.7B-example
+  backend: vllm
+  path: Qwen/Qwen3-1.7B
+  input_mode: chat
+  thinking: false
+  runtime:
+    tensor_parallel_size: 1
+    dtype: bfloat16
+    max_context_tokens: 32768
+    gpu_memory_utilization: 0.85
+decode:
+  temperature: 0.7
+  top_p: 0.95
+  seed: 0
+  max_output_tokens: 31744
+  samples_per_problem: 2
+output:
+  root: outputs/runs
+  shard_size: 100
+  compression: none
+  fsync_every: 1

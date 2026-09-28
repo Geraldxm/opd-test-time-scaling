@@ -1,0 +1,4 @@
+Problem: {{problem}}
+Think step by step. Put the final answer in \boxed{}.
+Solution:
+/

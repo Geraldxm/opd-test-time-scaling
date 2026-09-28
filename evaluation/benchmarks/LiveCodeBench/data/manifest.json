@@ -1,0 +1,35 @@
+{
+  "dataset": "livecodebench/code_generation_lite",
+  "revision": "0fe84c3912ea0c4d4a78037083943e8f0c4dd505",
+  "source_files": {
+    "test.jsonl": {"questions": 400, "sha256": "2bd02b38beb48e8c46b5b9987095d999ff38cd8efc255ea5d58974317c48f63f"},
+    "test2.jsonl": {"questions": 111, "sha256": "095df7c5daf15f882c51a9deb84085cff1e073495a5dbcf95015a564d485f3a3"},
+    "test3.jsonl": {"questions": 101, "sha256": "28ed26cc83363ce3f1fe2d5fad9f8393077beb1907b167a31bd3b32f80801b79"},
+    "test4.jsonl": {"questions": 101, "sha256": "d711138ddaebfcf5f8ec6a4283ee677298c0f5c5d374a235af92aaf0584510da"},
+    "test5.jsonl": {"questions": 167, "sha256": "7f77571c2a6df0c2a72a3277650309f67e01e0008e18117e624633df53f81214"},
+    "test6.jsonl": {"questions": 175, "sha256": "bb4c364f71921c4495a6ad15abe1a927350b720009f4933e2e71f8af0f6fd1f5"}
+  },
+  "canonical_files": {
+    "livecodebench_v5_chat.jsonl": {"questions": 880, "sha256": "276511bb37efd62da9d52fb32205167ca5fb4307e14b69e191264c510efa64a8"},
+    "livecodebench_v5_completion.jsonl": {"questions": 880, "sha256": "36cb9de5c9af388711134739cb4e6ad30ee3f508035bd2bf891128ffe97cf03c"},
+    "livecodebench_v6_only_chat.jsonl": {"questions": 175, "sha256": "783910531de29701feafe8b64c3463344729b282f91b73b8dbd08b7abfac96f7"},
+    "livecodebench_v6_only_completion.jsonl": {"questions": 175, "sha256": "c3102f10064042c38d2910e2128d2608a0c6f54ebe031d34f7066ccd04b1fd03"}
+  },
+  "judge": {
+    "original_project": "LiveCodeBench",
+    "original_project_repository": "https://github.com/LiveCodeBench/LiveCodeBench",
+    "snapshot_source": {
+      "repository": "G-OPD",
+      "tree": "code_eval/coding/LiveCodeBench",
+      "g_opd_commit": "37371a4c31ad7947746200d234161769191f4748"
+    },
+    "snapshot_files_sha256": {
+      "LICENSE": "104099948b78ebc36f2e951b3a7973b956adfa7d39aaec0d1512f97a2686d15d",
+      "lcb_runner/benchmarks/code_generation.py": "96bf9f8f836306079c0fb5263e3cb88e42cac17a23d4448947a84bf71b09303c",
+      "lcb_runner/evaluation/compute_code_generation_metrics.py": "073f388cc78bf0eb0ad35eaeb8bb509c0a3664963e5305d2be13d6b6eb6f3d21",
+      "lcb_runner/evaluation/pass_k_utils.py": "6af3ee55d40f96fa06fa511bd5e43d94b19604750e82454b4b3c1f45c5199010",
+      "lcb_runner/evaluation/testing_util.py": "cd06a6add04f144056b668ead55a0144aa6f94d7bc1f42d4b567e1a3c9d3e6be"
+    },
+    "license": "MIT"
+  }
+}
