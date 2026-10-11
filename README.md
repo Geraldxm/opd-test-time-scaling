@@ -4,8 +4,8 @@ Code and resources for our [paper](https://arxiv.org/abs/2608.11829). We release
 our OPD checkpoints, frozen training and evaluation code, benchmark inputs or
 download scripts, and data behind the main figures and tables.
 
-[![Paper](https://img.shields.io/badge/PAPER-arXiv%3A2608.11829-B31B1B?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2608.11829)
 [![Project page](https://img.shields.io/badge/PROJECT%20PAGE-j3ra1d.top-2F855A?style=for-the-badge)](https://j3ra1d.top/opd-test-time-scaling/)
+[![Paper](https://img.shields.io/badge/PAPER-arXiv%3A2608.11829-B31B1B?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2608.11829)
 [![Checkpoints](https://img.shields.io/badge/CHECKPOINTS-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)](https://huggingface.co/collections/Geraldxm/opd-test-time-scaling-math-code-and-fact-checkpoints-6aba42275d3362d882cfc472)
 [![Code and data](https://img.shields.io/badge/CODE%20%26%20DATA-000000?style=for-the-badge&logo=github&logoColor=white)](#code-and-data)
 
